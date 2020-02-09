@@ -1,6 +1,15 @@
+# Positional-only parameters
 #: Okay
 def f(a, /, b):
     pass
+#: Okay
+def f(a, b, /):
+    pass
+#: Okay
+lambda a, /, b: ...
+lambda a, b, /: ...
+
+# Assignment expressions
 #: Okay
 if x := 1:
     print(x)
