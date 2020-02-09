@@ -863,7 +863,7 @@ def missing_whitespace_around_operator(logical_line, tokens):
             elif prev_text == '/' and text in (')', ','):
                 # Tolerate the "/" operator in function definition
                 # For more info see PEP570
-                pass
+                need_space = False
             else:
                 if need_space is True or need_space[1]:
                     # A needed trailing space was not found
